@@ -3,7 +3,7 @@ global _start
 extern kernel_early
 extern main
 
-section	.text
+section .text
     align 4
     dd 0x1BADB002
     dd 0x00
