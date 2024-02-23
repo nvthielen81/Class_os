@@ -1,3 +1,8 @@
+// ###########################
+// copyricht Class O/s
+// Nadir Van Thielen
+// ##########################
+
 bits 32
 global _start
 extern kernel_early
