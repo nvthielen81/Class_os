@@ -1,28 +1,33 @@
-static char* const VGA_MEMORY =(char*)0xb8000;
+#include "kernel/tty.h"
+#include "kernel/io.h"
+#include "kernel/kbd.h"
+#include "libc/include/string.h"
 
-static const int VGA_WIDTH = 80;
-static const int VGA_HEIGHT = 25;
 
 void kernel_early(void) {
-
-
+	
+	terminal_initialize();
 }
 
-int main(void)
-{
-    const char *str = "Hallo world";
-    unsigned int i= 0;
-    unsigned int j = 0;
+int main(void) {
+	
 
-    while (str[i] != '\0'){
 
-    VGA_MEMORY[j] = str[i];
-    VGA_MEMORY[j + 1] = 0x07;
-    i++;
-    j = j + 2; 
 
-}
+	printf("RAM OS/UNIX\n");
+	printf("IO/S LOADING  [######################]\n");
+	printf("Copyright Nadir Van Thielen 2024 (C)\n");
+	printf("GPLv2 Private licence FireWall CLASS 1\n");
+	printf("Enter: help to se, the help commands protocols");
 
-return 0;
+	cinput();
+
+	
+	return 0;
+		
+	 
+			
+	
+
 
 }
